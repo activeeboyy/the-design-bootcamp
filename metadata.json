@@ -1,0 +1,8 @@
+{
+  "name": "The Design Bootcamp",
+  "description": "A premium, beginner-friendly online graphic design course teaching Adobe Photoshop, typography, and practical design fundamentals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
