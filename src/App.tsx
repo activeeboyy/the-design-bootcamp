@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Hero } from './components/Hero';
 import { BeHonestSection } from './components/BeHonestSection';
 import { FranklinStory } from './components/FranklinStory';
@@ -54,6 +55,9 @@ export default function App() {
 
       {/* 10. MINIMAL PREMIUM FOOTER */}
       <Footer />
+      
+      {/* Vercel Speed Insights */}
+      <SpeedInsights />
     </div>
   );
 }
