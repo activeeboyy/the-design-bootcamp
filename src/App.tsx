@@ -14,6 +14,7 @@ import { WhoThisIsFor } from './components/WhoThisIsFor';
 import { ClosingSection } from './components/ClosingSection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
+import { ScrollToTop } from './components/ScrollToTop';
 import { PAYMENT_URL } from './config';
 
 export default function App() {
@@ -54,6 +55,9 @@ export default function App() {
 
       {/* 10. MINIMAL PREMIUM FOOTER */}
       <Footer />
+
+      {/* FLOATING SCROLL TO TOP NAV ICON */}
+      <ScrollToTop />
     </div>
   );
 }
