@@ -134,10 +134,10 @@ export const ClosingSection: React.FC<ClosingSectionProps> = ({ onJoinClick }) =
           <a
             href={PAYMENT_URL}
             onClick={onJoinClick}
-            className="w-full py-4 px-6 rounded-2xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-base sm:text-lg tracking-wide uppercase transition-all duration-200 shadow-xl shadow-amber-400/20 hover:shadow-amber-400/30 active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2 group mb-3"
+            className="w-full py-4 px-6 rounded-2xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-base sm:text-lg tracking-wide uppercase transition-all duration-200 shadow-xl shadow-amber-400/20 hover:shadow-amber-400/35 active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2 group shimmer-btn mb-3"
           >
             <span>🎨 START MY DESIGN JOURNEY</span>
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1.5" />
           </a>
 
           {/* After 50 days notice */}

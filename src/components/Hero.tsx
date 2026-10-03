@@ -20,17 +20,19 @@ export const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
   return (
     <section className="relative pt-16 pb-16 sm:pt-24 sm:pb-24 lg:pt-28 lg:pb-32 overflow-hidden bg-[#090A0F] bg-grid-pattern">
       {/* Background ambient lighting - strictly CSS gradients, no images */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] sm:w-[750px] h-[350px] bg-gradient-to-tr from-amber-500/10 via-amber-400/5 to-transparent blur-3xl pointer-events-none -z-10 rounded-full" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] sm:w-[750px] h-[350px] bg-gradient-to-tr from-amber-500/15 via-amber-400/10 to-transparent blur-3xl pointer-events-none -z-10 rounded-full animate-pulse-glow" />
       <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-orange-600/5 blur-3xl pointer-events-none -z-10 rounded-full" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Eyebrow text - clean unboxed typography without pills */}
-        <div className="flex items-center justify-center gap-2 mb-6">
-          <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+        {/* Eyebrow text with subtle live pulse indicator */}
+        <div className="inline-flex items-center justify-center gap-2.5 mb-6 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-sm">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
+          </span>
           <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-amber-400 uppercase font-sans">
             THE DESIGN BOOTCAMP
           </span>
-          <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
         </div>
 
         {/* Main headline */}
@@ -64,13 +66,13 @@ export const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
           </div>
         </div>
 
-        {/* Roadmap statement */}
-        <div className="inline-block px-4 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-neutral-200 text-sm sm:text-base font-medium mb-12 shadow-sm">
+        {/* Roadmap statement with subtle floating animation */}
+        <div className="inline-block px-4 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-neutral-200 text-sm sm:text-base font-medium mb-12 shadow-sm animate-float">
           Just you + the right roadmap + consistent practice. 💻✨
         </div>
 
         {/* PRICE CARD - directly inside / underneath hero */}
-        <div className="max-w-xl mx-auto rounded-3xl bg-[#11131F] border border-amber-400/20 p-6 sm:p-8 shadow-2xl relative glow-card">
+        <div className="max-w-xl mx-auto rounded-3xl bg-[#11131F] border border-amber-400/20 p-6 sm:p-8 shadow-2xl relative glow-card hover:border-amber-400/40 transition-colors duration-300">
           {/* Subtle top accent highlight */}
           <div className="absolute -top-px left-1/2 -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
 
@@ -105,14 +107,14 @@ export const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
             <CountdownTimer />
           </div>
 
-          {/* Prominent CTA button */}
+          {/* Prominent CTA button with shimmer */}
           <a
             href={PAYMENT_URL}
             onClick={onJoinClick}
-            className="w-full py-4 px-6 rounded-2xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-base sm:text-lg tracking-wide uppercase transition-all duration-200 shadow-xl shadow-amber-400/20 hover:shadow-amber-400/30 active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2 group"
+            className="w-full py-4 px-6 rounded-2xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-base sm:text-lg tracking-wide uppercase transition-all duration-200 shadow-xl shadow-amber-400/20 hover:shadow-amber-400/35 active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2 group shimmer-btn"
           >
             <span>🎨 JOIN THE DESIGN BOOTCAMP — {formatNaira(currentPrice)}</span>
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1.5" />
           </a>
 
           {/* Under button reassurance */}

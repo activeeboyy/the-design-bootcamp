@@ -21,7 +21,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onJoinClick }) => {
     <section className="py-20 sm:py-28 lg:py-32 bg-[#090A0F] text-[#F3F4F6] relative overflow-hidden">
       {/* Background ambient glow */}
       <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 blur-3xl pointer-events-none -z-10 rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/15 blur-3xl pointer-events-none -z-10 rounded-full animate-pulse-glow" />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Eye-catching headline */}
@@ -84,10 +84,10 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onJoinClick }) => {
           <a
             href={PAYMENT_URL}
             onClick={onJoinClick}
-            className="w-full py-4 px-8 rounded-2xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-base sm:text-lg tracking-wide uppercase transition-all duration-200 shadow-xl shadow-amber-400/20 hover:shadow-amber-400/30 active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2 group"
+            className="w-full py-4 px-8 rounded-2xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-base sm:text-lg tracking-wide uppercase transition-all duration-200 shadow-xl shadow-amber-400/20 hover:shadow-amber-400/35 active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2 group shimmer-btn"
           >
             <span>🚀 I'M READY — GIVE ME ACCESS</span>
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1.5" />
           </a>
         </div>
       </div>

@@ -63,12 +63,12 @@ export const WhoThisIsFor: React.FC = () => {
             return (
               <div
                 key={item.title}
-                className={`p-6 sm:p-7 rounded-2xl bg-[#11131E] border border-white/5 hover:border-amber-400/30 transition-all duration-200 flex flex-col justify-between ${
+                className={`p-6 sm:p-7 rounded-2xl bg-[#11131E] border border-white/5 hover:border-amber-400/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40 transition-all duration-300 flex flex-col justify-between group ${
                   isLast ? 'sm:col-span-2 lg:col-span-1' : ''
                 }`}
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/20 text-amber-400 flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/20 text-amber-400 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-amber-400/15 transition-all duration-300">
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight font-display mb-2">
