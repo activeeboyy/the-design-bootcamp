@@ -4,16 +4,17 @@
  */
 
 import React from 'react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Loader2 } from 'lucide-react';
 import { CountdownTimer } from './CountdownTimer';
 import { formatNaira, LAUNCH_PRICE_NAIRA, REGULAR_PRICE_NAIRA, PAYMENT_URL } from '../config';
 import { useCountdown } from '../hooks/useCountdown';
 
 interface ClosingSectionProps {
-  onJoinClick: () => void;
+  onJoinClick: (e?: React.MouseEvent) => void;
+  isRedirecting?: boolean;
 }
 
-export const ClosingSection: React.FC<ClosingSectionProps> = ({ onJoinClick }) => {
+export const ClosingSection: React.FC<ClosingSectionProps> = ({ onJoinClick, isRedirecting }) => {
   const { isExpired } = useCountdown();
   const currentPrice = isExpired ? REGULAR_PRICE_NAIRA : LAUNCH_PRICE_NAIRA;
 
@@ -134,10 +135,21 @@ export const ClosingSection: React.FC<ClosingSectionProps> = ({ onJoinClick }) =
           <a
             href={PAYMENT_URL}
             onClick={onJoinClick}
-            className="w-full py-4 px-6 rounded-2xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-base sm:text-lg tracking-wide uppercase transition-all duration-200 shadow-xl shadow-amber-400/20 hover:shadow-amber-400/35 active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2 group shimmer-btn mb-3"
+            className={`w-full py-4 px-6 rounded-2xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-base sm:text-lg tracking-wide uppercase transition-all duration-200 shadow-xl shadow-amber-400/20 hover:shadow-amber-400/35 active:scale-[0.96] cursor-pointer flex items-center justify-center gap-2 group shimmer-btn mb-3 ${
+              isRedirecting ? 'scale-[0.98] opacity-90 cursor-wait' : ''
+            }`}
           >
-            <span>🎨 START MY DESIGN JOURNEY</span>
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1.5" />
+            {isRedirecting ? (
+              <>
+                <Loader2 className="w-5 h-5 animate-spin" />
+                <span>REDIRECTING TO PAYSTACK...</span>
+              </>
+            ) : (
+              <>
+                <span>🎨 START MY DESIGN JOURNEY</span>
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1.5" />
+              </>
+            )}
           </a>
 
           {/* After 50 days notice */}

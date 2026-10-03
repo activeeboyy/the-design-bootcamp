@@ -97,6 +97,37 @@
   animation: shimmerEffect 4s infinite;
 }
 
+@keyframes progressAnim {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes scaleUpAnim {
+  0% { transform: scale(0.92); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes cardFloatAnim {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.animate-progress {
+  animation: progressAnim 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-up {
+  animation: scaleUpAnim 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.module-card {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+
 /* Motion reduction */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {

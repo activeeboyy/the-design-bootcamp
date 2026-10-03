@@ -154,23 +154,23 @@ export const CurriculumSection: React.FC<CurriculumSectionProps> = ({ onJoinClic
               return (
                 <div
                   key={mod.number}
-                  className="md:col-span-2 relative rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-[#1E1B15] via-[#161722] to-[#12131D] border-2 border-amber-400/40 hover:border-amber-400/70 shadow-2xl glow-amber overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-amber-400/15 group"
+                  className="md:col-span-2 relative rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-[#1E1B15] via-[#161722] to-[#12131D] border-2 border-amber-400/40 hover:border-amber-400 shadow-2xl glow-amber overflow-hidden module-card group cursor-default"
                 >
-                  <div className="absolute top-0 right-0 px-4 py-1.5 bg-amber-400 text-black text-xs font-black uppercase tracking-wider rounded-bl-2xl shadow-sm">
+                  <div className="absolute top-0 right-0 px-4 py-1.5 bg-amber-400 text-black text-xs font-black uppercase tracking-wider rounded-bl-2xl shadow-sm group-hover:bg-amber-300 transition-colors">
                     {mod.badge || 'Practical Project'}
                   </div>
 
                   <div className="flex flex-col sm:flex-row sm:items-start gap-5 pt-2 sm:pt-0">
-                    <div className="w-14 h-14 rounded-2xl bg-amber-400 text-black flex items-center justify-center shrink-0 shadow-lg shadow-amber-400/20 group-hover:scale-105 group-hover:rotate-1 transition-all duration-300">
+                    <div className="w-14 h-14 rounded-2xl bg-amber-400 text-black flex items-center justify-center shrink-0 shadow-lg shadow-amber-400/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                       <Icon className="w-7 h-7" />
                     </div>
 
                     <div className="flex-1 space-y-3">
                       <div className="flex items-center gap-3">
-                        <span className="font-mono text-sm font-bold text-amber-400 tracking-wider">
+                        <span className="font-mono text-sm font-bold text-amber-400 tracking-wider group-hover:text-amber-300 transition-colors">
                           MODULE {mod.number}
                         </span>
-                        <span className="text-xs font-semibold px-2 py-0.5 rounded bg-white/10 text-white uppercase tracking-wider">
+                        <span className="text-xs font-semibold px-2 py-0.5 rounded bg-white/10 text-white uppercase tracking-wider group-hover:bg-white/15 transition-colors">
                           Hands-on Project
                         </span>
                       </div>
@@ -184,7 +184,7 @@ export const CurriculumSection: React.FC<CurriculumSectionProps> = ({ onJoinClic
                       </p>
 
                       {mod.subtext && (
-                        <div className="inline-block px-4 py-2 rounded-xl bg-amber-400/10 border border-amber-400/20 text-amber-300 font-semibold text-sm sm:text-base group-hover:bg-amber-400/15 transition-colors">
+                        <div className="inline-block px-4 py-2 rounded-xl bg-amber-400/10 border border-amber-400/20 text-amber-300 font-semibold text-sm sm:text-base group-hover:bg-amber-400/20 group-hover:border-amber-400/40 transition-all">
                           {mod.subtext}
                         </div>
                       )}
@@ -197,14 +197,14 @@ export const CurriculumSection: React.FC<CurriculumSectionProps> = ({ onJoinClic
             return (
               <div
                 key={mod.number}
-                className="rounded-2xl p-6 sm:p-7 bg-[#12141F] border border-white/5 hover:border-amber-400/30 transition-all duration-300 hover:-translate-y-1 shadow-sm space-y-4 flex flex-col justify-between group"
+                className="rounded-2xl p-6 sm:p-7 bg-[#12141F] hover:bg-[#151724] border border-white/5 hover:border-amber-400/40 shadow-sm hover:shadow-xl hover:shadow-black/50 space-y-4 flex flex-col justify-between module-card group cursor-default"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="font-mono text-xs font-bold text-amber-400 tracking-wider">
+                    <span className="font-mono text-xs font-bold text-amber-400 tracking-wider group-hover:tracking-widest transition-all duration-300">
                       MODULE {mod.number}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-amber-400/30 flex items-center justify-center text-neutral-300 group-hover:text-amber-400 group-hover:scale-105 transition-all duration-200">
+                    <div className="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/10 group-hover:border-amber-400/40 group-hover:bg-amber-400/10 flex items-center justify-center text-neutral-300 group-hover:text-amber-400 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                       <Icon className="w-5 h-5" />
                     </div>
                   </div>

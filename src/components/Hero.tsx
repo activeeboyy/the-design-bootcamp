@@ -4,16 +4,17 @@
  */
 
 import React from 'react';
-import { ArrowRight, CheckCircle2, Sparkles, Shield, Clock } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Sparkles, Shield, Clock, Loader2 } from 'lucide-react';
 import { CountdownTimer } from './CountdownTimer';
 import { formatNaira, LAUNCH_PRICE_NAIRA, REGULAR_PRICE_NAIRA, PAYMENT_URL } from '../config';
 import { useCountdown } from '../hooks/useCountdown';
 
 interface HeroProps {
-  onJoinClick: () => void;
+  onJoinClick: (e?: React.MouseEvent) => void;
+  isRedirecting?: boolean;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
+export const Hero: React.FC<HeroProps> = ({ onJoinClick, isRedirecting }) => {
   const { isExpired } = useCountdown();
   const currentPrice = isExpired ? REGULAR_PRICE_NAIRA : LAUNCH_PRICE_NAIRA;
 
@@ -107,14 +108,25 @@ export const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
             <CountdownTimer />
           </div>
 
-          {/* Prominent CTA button with shimmer */}
+          {/* Prominent CTA button with shimmer & click animation */}
           <a
             href={PAYMENT_URL}
             onClick={onJoinClick}
-            className="w-full py-4 px-6 rounded-2xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-base sm:text-lg tracking-wide uppercase transition-all duration-200 shadow-xl shadow-amber-400/20 hover:shadow-amber-400/35 active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2 group shimmer-btn"
+            className={`w-full py-4 px-6 rounded-2xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-base sm:text-lg tracking-wide uppercase transition-all duration-200 shadow-xl shadow-amber-400/20 hover:shadow-amber-400/35 active:scale-[0.96] cursor-pointer flex items-center justify-center gap-2 group shimmer-btn ${
+              isRedirecting ? 'scale-[0.98] opacity-90 cursor-wait' : ''
+            }`}
           >
-            <span>🎨 JOIN THE DESIGN BOOTCAMP — {formatNaira(currentPrice)}</span>
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1.5" />
+            {isRedirecting ? (
+              <>
+                <Loader2 className="w-5 h-5 animate-spin" />
+                <span>REDIRECTING TO PAYSTACK...</span>
+              </>
+            ) : (
+              <>
+                <span>🎨 JOIN THE DESIGN BOOTCAMP — {formatNaira(currentPrice)}</span>
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1.5" />
+              </>
+            )}
           </a>
 
           {/* Under button reassurance */}
