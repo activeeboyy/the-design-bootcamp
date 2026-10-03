@@ -15,9 +15,6 @@ export const HowItWorks: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-14 sm:mb-20">
-          <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-neutral-500 uppercase block mb-3 font-sans">
-            The Student Experience
-          </span>
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D0F15] tracking-tight font-display mb-3">
             YOU'RE NOT BUYING A BUNCH OF VIDEOS.
           </h2>

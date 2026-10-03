@@ -46,9 +46,6 @@ export const WhoThisIsFor: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14 sm:mb-16">
-          <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-amber-400 uppercase block mb-3 font-sans">
-            Target Audience
-          </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-display mb-4">
             WHO THIS IS FOR
           </h2>

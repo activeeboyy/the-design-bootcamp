@@ -25,9 +25,6 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onJoinClick }) => {
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Eye-catching headline */}
-        <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-amber-400 uppercase block mb-3 font-sans">
-          Special Launch Enrolment
-        </span>
         <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight font-display mb-6">
           🚨 WAIT... {formatNaira(LAUNCH_PRICE_NAIRA)}?!
         </h2>
@@ -70,9 +67,6 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onJoinClick }) => {
 
           {/* Countdown timer */}
           <div className="mb-8">
-            <div className="text-[11px] font-bold tracking-widest text-neutral-400 uppercase mb-2">
-              ⏳ LAUNCH PRICE COUNTDOWN
-            </div>
             <CountdownTimer />
           </div>
 

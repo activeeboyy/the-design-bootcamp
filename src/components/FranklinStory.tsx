@@ -15,9 +15,6 @@ export const FranklinStory: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 sm:mb-16">
-          <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-amber-400 uppercase block mb-3 font-sans">
-            Founder Story
-          </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-display mb-3">
             👋🏽 HI, I'M FRANKLIN.
           </h2>
@@ -68,7 +65,7 @@ export const FranklinStory: React.FC = () => {
                 So I did.
               </p>
               <div className="p-4 rounded-xl bg-amber-400/10 border border-amber-400/20 text-neutral-200 text-sm sm:text-base leading-relaxed">
-                I created my first course, <span className="font-semibold text-white">The Smartphone Graphic Design Blueprint</span>, and went on to teach <span className="font-bold text-amber-400">800+ people</span> how to design using their smartphones.
+                In 2022, I created my first course, <span className="font-semibold text-white">The Smartphone Graphic Design Blueprint</span>, and went on to teach <span className="font-bold text-amber-400">800+ people</span> how to design using their smartphones.
               </div>
             </div>
           </div>
@@ -115,9 +112,6 @@ export const FranklinStory: React.FC = () => {
         {/* Transition statement */}
         <div className="mt-14 text-center">
           <div className="inline-block p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-[#181B2B] to-[#10121C] border border-amber-400/30 shadow-2xl">
-            <span className="text-xs font-bold tracking-widest text-neutral-400 uppercase block mb-2">
-              The Culmination
-            </span>
             <div className="text-2xl sm:text-4xl font-extrabold text-white font-display tracking-tight">
               That's THE DESIGN BOOTCAMP. 🚀
             </div>

@@ -24,9 +24,6 @@ export const ClosingSection: React.FC<ClosingSectionProps> = ({ onJoinClick }) =
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         {/* Header */}
-        <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-neutral-400 uppercase block mb-3 font-sans">
-          The Crossroads
-        </span>
         <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight font-display mb-8">
           YOU'VE GOT TWO OPTIONS. 👀
         </h2>
@@ -130,9 +127,6 @@ export const ClosingSection: React.FC<ClosingSectionProps> = ({ onJoinClick }) =
 
           {/* Countdown timer */}
           <div className="mb-6 pt-6 border-t border-white/10 text-center">
-            <div className="text-[11px] font-bold tracking-widest text-neutral-400 uppercase mb-2">
-              ⏳ LAUNCH DEADLINE
-            </div>
             <CountdownTimer />
           </div>
 

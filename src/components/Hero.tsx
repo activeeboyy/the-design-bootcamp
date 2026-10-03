@@ -102,9 +102,6 @@ export const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
 
           {/* Countdown timer */}
           <div className="mb-6">
-            <div className="text-[11px] font-bold tracking-widest text-neutral-400 uppercase mb-2">
-              ⏳ LAUNCH PRICE DEADLINE
-            </div>
             <CountdownTimer />
           </div>
 

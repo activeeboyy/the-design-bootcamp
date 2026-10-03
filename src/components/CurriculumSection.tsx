@@ -94,9 +94,6 @@ export const CurriculumSection: React.FC<CurriculumSectionProps> = ({ onJoinClic
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-14 sm:mb-20">
-          <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-amber-400 uppercase block mb-3 font-sans">
-            Structured Curriculum
-          </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-display mb-4">
             🧠 WHAT'S INSIDE?
           </h2>

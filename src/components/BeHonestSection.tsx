@@ -15,9 +15,6 @@ export const BeHonestSection: React.FC = () => {
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Headline */}
         <div className="text-center mb-12 sm:mb-16">
-          <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-neutral-500 uppercase block mb-3 font-sans">
-            A Moment of Truth
-          </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0D0F15] tracking-tight font-display">
             👀 BE HONEST...
           </h2>
