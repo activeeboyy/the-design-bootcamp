@@ -8,7 +8,6 @@ import { Hero } from './components/Hero';
 import { BeHonestSection } from './components/BeHonestSection';
 import { FranklinStory } from './components/FranklinStory';
 import { CurriculumSection } from './components/CurriculumSection';
-import { PortfolioSection } from './components/PortfolioSection';
 import { OfferSection } from './components/OfferSection';
 import { HowItWorks } from './components/HowItWorks';
 import { WhoThisIsFor } from './components/WhoThisIsFor';
@@ -37,10 +36,7 @@ export default function App() {
         {/* 4. WHAT'S INSIDE? (Comprehensive Modules + Practical Design Projects) */}
         <CurriculumSection onJoinClick={handleJoinClick} />
 
-        {/* 5. HOW TO BUILD A DESIGN PORTFOLIO TO LAND GIGS */}
-        <PortfolioSection onJoinClick={handleJoinClick} />
-
-        {/* 6. OFFER / PRICE SECTION (Launch offer + countdown) */}
+        {/* 5. OFFER / PRICE SECTION (Launch offer + countdown) */}
         <OfferSection onJoinClick={handleJoinClick} />
 
         {/* 6. HOW IT WORKS (4-Step learning experience) */}

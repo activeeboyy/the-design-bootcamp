@@ -234,6 +234,19 @@ export const CurriculumSection: React.FC<CurriculumSectionProps> = ({ onJoinClic
             );
           })}
         </div>
+
+        {/* Real-World Reassurance Box */}
+        <div className="mt-10 sm:mt-14 rounded-3xl bg-gradient-to-r from-[#171A29] via-[#131522] to-[#171A29] border border-amber-400/30 p-8 sm:p-12 text-center max-w-4xl mx-auto shadow-2xl glow-card">
+          <div className="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/20 text-amber-400 flex items-center justify-center mx-auto mb-5">
+            <Sparkles className="w-6 h-6" />
+          </div>
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display mb-4">
+            You don't need 100 past clients to start landing paid gigs.
+          </h3>
+          <p className="text-neutral-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+            You just need 3 to 5 solid, well-presented designs (like the corporate flyer, webinar visual, high-energy nightlife flyer, and social media campaigns you build in this bootcamp) and the confidence to show them to people who need them.
+          </p>
+        </div>
       </div>
     </section>
   );
