@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
             THE DESIGN BOOTCAMP
           </span>
           <p className="text-sm font-semibold text-amber-400 font-display">
-            “Just start. 🎨”
+            Learn Graphic Design The Nigerian Way 🎨
           </p>
         </div>
 

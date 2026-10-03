@@ -14,7 +14,11 @@ import {
   Eye, 
   Palette, 
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  Video,
+  Share2,
+  Briefcase,
+  Flame
 } from 'lucide-react';
 
 interface Module {
@@ -25,6 +29,7 @@ interface Module {
   subtext?: string;
   topics?: string;
   isSpecial?: boolean;
+  badge?: string;
 }
 
 const MODULES: Module[] = [
@@ -76,11 +81,48 @@ const MODULES: Module[] = [
   },
   {
     number: "08",
-    title: "LET'S ACTUALLY DESIGN",
+    title: "LET'S ACTUALLY DESIGN: YOUR FIRST FLYER",
     icon: Palette,
-    description: "Enough watching. We're opening Photoshop and creating.",
-    subtext: "Your first Photoshop flyer + more practical designs.",
+    description: "Enough watching. We're opening Photoshop and creating your first complete design project from scratch.",
+    subtext: "Your first Photoshop flyer + foundational design mechanics.",
     isSpecial: true,
+    badge: "Practical Project 1",
+  },
+  {
+    number: "09",
+    title: "PRACTICAL WEBINAR FLYER DESIGN",
+    icon: Video,
+    description: "In this part, we will be designing a high-converting, professional webinar flyer step-by-step in Photoshop.",
+    subtext: "Speaker framing, typography hierarchy, event badge & lighting effects.",
+    isSpecial: true,
+    badge: "Practical Project 2 • Webinar Flyer",
+  },
+  {
+    number: "10",
+    title: "FULL-BLOWN SOCIAL MEDIA DESIGN",
+    icon: Share2,
+    description: "We will be working on a full-blown social media design — crafting scroll-stopping promotional creatives and brand assets.",
+    subtext: "Visual hooks, multi-format sizing & brand consistency for client campaigns.",
+    isSpecial: true,
+    badge: "Practical Project 3 • Social Media",
+  },
+  {
+    number: "11",
+    title: "TEXT EFFECTS & NIGHTLIFE / CLUB FLYER DESIGN",
+    icon: Flame,
+    description: "We will be working with advanced text effects and designing high-energy nightlife flyers for events, lounges, and night clubs. You'll learn exactly how and what it takes to achieve that dark, glowing, premium club vibe.",
+    subtext: "Neon glows, 3D text styling, particle effects, smoke & dramatic lighting.",
+    isSpecial: true,
+    badge: "Practical Project 4 • Nightlife & Events",
+  },
+  {
+    number: "12",
+    title: "BUILD YOUR PORTFOLIO TO LAND DESIGN GIGS",
+    icon: Briefcase,
+    description: "Learn how to package your bootcamp designs into a winning portfolio, present your work like a pro, and start landing paid design gigs.",
+    subtext: "Free portfolio setup, client pitch scripts & pricing your design work.",
+    isSpecial: true,
+    badge: "Career Blueprint • Monetization",
   },
 ];
 
@@ -97,8 +139,8 @@ export const CurriculumSection: React.FC<CurriculumSectionProps> = ({ onJoinClic
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-display mb-4">
             🧠 WHAT'S INSIDE?
           </h2>
-          <p className="max-w-2xl mx-auto text-neutral-400 text-sm sm:text-base font-normal">
-            8 focused, hype-free modules taking you from square zero to creating confident designs.
+          <p className="max-w-2xl mx-auto text-neutral-300 text-sm sm:text-base font-normal">
+            Packed with step-by-step video lessons and practical modules taking you from square zero to creating confident designs.
           </p>
         </div>
 
@@ -115,7 +157,7 @@ export const CurriculumSection: React.FC<CurriculumSectionProps> = ({ onJoinClic
                   className="md:col-span-2 relative rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-[#1E1B15] via-[#161722] to-[#12131D] border-2 border-amber-400/50 shadow-2xl glow-amber overflow-hidden"
                 >
                   <div className="absolute top-0 right-0 px-4 py-1.5 bg-amber-400 text-black text-xs font-black uppercase tracking-wider rounded-bl-2xl">
-                    Final Practical Capstone
+                    {mod.badge || 'Practical Project'}
                   </div>
 
                   <div className="flex flex-col sm:flex-row sm:items-start gap-5 pt-2 sm:pt-0">
