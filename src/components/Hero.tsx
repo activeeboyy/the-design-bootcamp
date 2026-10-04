@@ -6,6 +6,7 @@
 import React from 'react';
 import { ArrowRight, CheckCircle2, Sparkles, Shield, Clock } from 'lucide-react';
 import { CountdownTimer } from './CountdownTimer';
+import { BootcampVideo } from './BootcampVideo';
 import { formatNaira, LAUNCH_PRICE_NAIRA, REGULAR_PRICE_NAIRA, PAYMENT_URL } from '../config';
 import { useCountdown } from '../hooks/useCountdown';
 
@@ -67,9 +68,12 @@ export const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
         </div>
 
         {/* Roadmap statement with subtle floating animation */}
-        <div className="inline-block px-4 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-neutral-200 text-sm sm:text-base font-medium mb-12 shadow-sm animate-float">
+        <div className="inline-block px-4 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-neutral-200 text-sm sm:text-base font-medium mb-4 shadow-sm animate-float">
           Just you + the right roadmap + consistent practice. 💻✨
         </div>
+
+        {/* YOUTUBE VIDEO WALKTHROUGH PLACEHOLDER & PLAYER */}
+        <BootcampVideo />
 
         {/* PRICE CARD - directly inside / underneath hero */}
         <div className="max-w-xl mx-auto rounded-3xl bg-[#11131F] border border-amber-400/20 p-6 sm:p-8 shadow-2xl relative glow-card hover:border-amber-400/40 transition-colors duration-300">
