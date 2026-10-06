@@ -15,10 +15,14 @@ import { ClosingSection } from './components/ClosingSection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
+import { PaymentVerificationBanner } from './components/PaymentVerificationBanner';
 
 export default function App() {
   return (
     <div className="min-h-screen bg-[#090A0F] text-[#F3F4F6] selection:bg-amber-400 selection:text-black">
+      {/* PAYSTACK PAYMENT RETURN VERIFICATION MODAL / BANNER */}
+      <PaymentVerificationBanner />
+
       <main>
         {/* 1. HERO SECTION & PRICE CARD */}
         <Hero />

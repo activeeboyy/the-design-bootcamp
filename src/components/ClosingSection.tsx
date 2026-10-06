@@ -8,6 +8,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { CountdownTimer } from './CountdownTimer';
 import { formatNaira, LAUNCH_PRICE_NAIRA, REGULAR_PRICE_NAIRA, PAYMENT_URL } from '../config';
 import { useCountdown } from '../hooks/useCountdown';
+import { trackInitiateCheckout } from '../utils/metaPixel';
 
 interface ClosingSectionProps {
   onJoinClick?: () => void;
@@ -16,6 +17,11 @@ interface ClosingSectionProps {
 export const ClosingSection: React.FC<ClosingSectionProps> = ({ onJoinClick }) => {
   const { isExpired } = useCountdown();
   const currentPrice = isExpired ? REGULAR_PRICE_NAIRA : LAUNCH_PRICE_NAIRA;
+
+  const handleCtaClick = () => {
+    trackInitiateCheckout({ value: currentPrice, currency: 'NGN' });
+    onJoinClick?.();
+  };
 
   return (
     <section className="py-20 sm:py-28 lg:py-32 bg-[#090A0F] text-[#F3F4F6] relative overflow-hidden bg-grid-pattern">
@@ -88,7 +94,7 @@ export const ClosingSection: React.FC<ClosingSectionProps> = ({ onJoinClick }) =
             </div>
             <a 
               href={PAYMENT_URL}
-              onClick={onJoinClick}
+              onClick={handleCtaClick}
               className="text-left sm:text-right cursor-pointer hover:opacity-95 transition-opacity"
               title="Click to proceed to Paystack checkout"
             >
@@ -133,7 +139,7 @@ export const ClosingSection: React.FC<ClosingSectionProps> = ({ onJoinClick }) =
           {/* Action Button */}
           <a
             href={PAYMENT_URL}
-            onClick={onJoinClick}
+            onClick={handleCtaClick}
             className="w-full py-4 px-6 rounded-2xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-base sm:text-lg tracking-wide uppercase transition-all duration-200 shadow-xl shadow-amber-400/20 hover:shadow-amber-400/35 active:scale-[0.96] cursor-pointer flex items-center justify-center gap-2 group shimmer-btn mb-3"
           >
             <span>🎨 START MY DESIGN JOURNEY</span>
