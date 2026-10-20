@@ -38,7 +38,7 @@ const FAQ_ITEMS: FaqItem[] = [
   },
   {
     question: "Will the price remain ₦9,500?",
-    answer: "No. ₦9,500 is the launch price for the first 50 days after launch. The price will then become ₦14,900.",
+    answer: "No. ₦9,500 is the launch price for the first 30 days after launch. The price will then become ₦14,900.",
   },
 ];
 

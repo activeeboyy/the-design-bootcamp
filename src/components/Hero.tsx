@@ -109,7 +109,7 @@ export const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
           </a>
 
           <p className="text-xs sm:text-sm text-neutral-400 mb-6 font-medium">
-            {!isExpired ? "Only for the first 50 days after launch." : "Standard enrollment pricing now active."}
+            {!isExpired ? "Only for the first 30 days after launch." : "Standard enrollment pricing now active."}
           </p>
 
           {/* Countdown timer */}

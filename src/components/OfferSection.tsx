@@ -40,9 +40,9 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onJoinClick }) => {
           <p className="text-2xl font-black text-amber-400 font-display">YES.</p>
           <p className="max-w-xl mx-auto">
             {!isExpired ? (
-              <>For the first 50 days after launch, you can join <span className="font-bold text-white uppercase">THE DESIGN BOOTCAMP</span> for <span className="font-bold text-amber-400">{formatNaira(LAUNCH_PRICE_NAIRA)}</span>.</>
+              <>For the first 30 days after launch, you can join <span className="font-bold text-white uppercase">THE DESIGN BOOTCAMP</span> for <span className="font-bold text-amber-400">{formatNaira(LAUNCH_PRICE_NAIRA)}</span>.</>
             ) : (
-              <>The initial 50-day launch window has concluded. You can join <span className="font-bold text-white uppercase">THE DESIGN BOOTCAMP</span> today at the standard rate of <span className="font-bold text-white">{formatNaira(REGULAR_PRICE_NAIRA)}</span>.</>
+              <>The initial 30-day launch window has concluded. You can join <span className="font-bold text-white uppercase">THE DESIGN BOOTCAMP</span> today at the standard rate of <span className="font-bold text-white">{formatNaira(REGULAR_PRICE_NAIRA)}</span>.</>
             )}
           </p>
         </div>
@@ -67,7 +67,7 @@ export const OfferSection: React.FC<OfferSectionProps> = ({ onJoinClick }) => {
           <div className="space-y-1 mb-8 text-neutral-300 text-sm sm:text-base">
             <p className="font-medium text-white">No fake ‘SALE ENDS IN 2 HOURS’ nonsense.</p>
             <p className="text-neutral-400">
-              {!isExpired ? "Just a genuine 50-day launch price." : "Transparent, one-time enrollment fee."}
+              {!isExpired ? "Just a genuine 30-day launch price." : "Transparent, one-time enrollment fee."}
             </p>
           </div>
 

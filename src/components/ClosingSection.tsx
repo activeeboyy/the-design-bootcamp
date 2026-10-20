@@ -102,7 +102,7 @@ export const ClosingSection: React.FC<ClosingSectionProps> = ({ onJoinClick }) =
                 {formatNaira(currentPrice)}
               </span>
               <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wide">
-                {!isExpired ? "FOR THE FIRST 50 DAYS" : "ONE-TIME PAYMENT"}
+                {!isExpired ? "FOR THE FIRST 30 DAYS" : "ONE-TIME PAYMENT"}
               </span>
             </a>
           </div>
@@ -146,9 +146,9 @@ export const ClosingSection: React.FC<ClosingSectionProps> = ({ onJoinClick }) =
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1.5" />
           </a>
 
-          {/* After 50 days notice */}
+          {/* After 30 days notice */}
           <p className="text-center text-xs text-neutral-400 font-medium">
-            {!isExpired ? `After 50 days → ${formatNaira(REGULAR_PRICE_NAIRA)}` : "Course Area + WhatsApp Support Included"}
+            {!isExpired ? `After 30 days → ${formatNaira(REGULAR_PRICE_NAIRA)}` : "Course Area + WhatsApp Support Included"}
           </p>
         </div>
       </div>
